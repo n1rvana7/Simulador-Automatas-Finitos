@@ -1,0 +1,12 @@
+#canvas {
+  user-select: none; /* Evita selección de texto al arrastrar */
+}
+
+#contextMenu {
+  width: 160px;
+}
+
+/* Opcional: resaltar botón activo */
+.btn-modo.ring {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
