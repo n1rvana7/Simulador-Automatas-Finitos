@@ -1,17 +1,4 @@
 const canvas = document.getElementById('canvas');
-// Agrega el marcador de flecha al SVG solo una vez
-if (!document.getElementById('arrowhead')) {
-  const marker = document.createElementNS("http://www.w3.org/2000/svg", "marker");
-  marker.setAttribute("id", "arrowhead");
-  marker.setAttribute("markerWidth", "10");
-  marker.setAttribute("markerHeight", "7");
-  marker.setAttribute("refX", "10");
-  marker.setAttribute("refY", "3.5");
-  marker.setAttribute("orient", "auto");
-  marker.setAttribute("markerUnits", "strokeWidth");
-  marker.innerHTML = `<polygon points="0 0, 10 3.5, 0 7" fill="#333"/>`;
-  canvas.appendChild(marker);
-}
 const menu = document.getElementById('contextMenu');
 const botonesModo = document.querySelectorAll(".btn-modo");
 
@@ -225,7 +212,6 @@ function crearTransicion(origen, destino, simbolo) {
   path.setAttribute("stroke", "#333");
   path.setAttribute("stroke-width", 2);
   path.setAttribute("fill", "none");
-  path.setAttribute("marker-end", "url(#arrowhead)");
   canvas.insertBefore(path, canvas.firstChild);
 
   const texto = document.createElementNS("http://www.w3.org/2000/svg", "text");
